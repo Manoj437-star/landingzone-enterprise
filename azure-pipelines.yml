@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    include:
+      - feature/*
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- checkout: self
+
+- script: |
+    echo "Repository downloaded successfully"
+    pwd
+    ls -R
+  displayName: "Checkout Repository"
