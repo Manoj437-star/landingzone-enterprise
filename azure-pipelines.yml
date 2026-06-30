@@ -10,8 +10,10 @@ steps:
 
 - checkout: self
 
-- script: |
-    echo "Repository downloaded successfully"
-    pwd
-    ls -R
+- powershell: |
+    Write-Host "Repository downloaded successfully"
+
+    Get-Location
+
+    Get-ChildItem -Recurse
   displayName: "Checkout Repository"
