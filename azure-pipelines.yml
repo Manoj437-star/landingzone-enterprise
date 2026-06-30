@@ -1,19 +1,17 @@
 trigger:
   branches:
     include:
-      - feature/*
       - main
+      - feature/*
 
-pool: Default
+pool:
+  name: Default
 
 steps:
-
 - checkout: self
 
 - powershell: |
     Write-Host "Repository downloaded successfully"
-
     Get-Location
-
     Get-ChildItem -Recurse
-  displayName: "Checkout Repository"
+  displayName: "Verify Repository Checkout"
