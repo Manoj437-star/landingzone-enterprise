@@ -4,8 +4,7 @@ trigger:
       - feature/*
       - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: Default
 
 steps:
 
